@@ -17,15 +17,14 @@
           transition="scale-transition"
           width="40"
         /> -->
-        
-
       </div>
 
       <v-spacer></v-spacer>
-
+      
       <v-btn
         text
         to="/about"
+        v-if="showBar"
       >
         <span class="mr-2">ABOUT</span>
         <v-icon>mdi-account-details</v-icon>
@@ -34,6 +33,7 @@
       <v-btn
         text
         to="/product"
+        v-if="showBar"
       >
         <span class="mr-2">PRODUCT</span>
         <v-icon>mdi-star-outline</v-icon>
@@ -41,6 +41,7 @@
       <v-btn
         text
         to="/research"
+        v-if="showBar"
       >
         <span class="mr-2">RESEARCH</span>
         <v-icon>mdi-chart-bar</v-icon>
@@ -48,10 +49,12 @@
       <v-btn
         text
         to="/blog"
+        v-if="showBar"
       >
         <span class="mr-2">BLOG</span>
         <v-icon>mdi-newspaper-variant-outline</v-icon>
       </v-btn>
+      
     </v-app-bar>
 
     <v-content>
@@ -66,9 +69,40 @@ export default {
   name: 'App',
   components: {
   },
+  data(){
+    return{
+      showBar:true,
+      showNav:false,
+    }
+  },
+  methods: {
+    handleResize: function() {
+      // resizeのたびにこいつが発火するので、ここでやりたいことをやる
+      this.$store.state.width = window.innerWidth;
+      this.$store.state.height = window.innerHeight;
+      if(this.$store.state.width<=750){
+        this.showBar=false
+      }else{
+        this.showBar=true
+      }
+      this.showNav= !this.showBar
+    },
+    
+  },
+  created() {
+    if(this.$store.state.width<=750){
+        this.showBar=false
+      }else{
+        this.showBar=true
+      }
+      this.showNav= !this.showBar
+  },
+  mounted: function () {
+    window.addEventListener('resize', this.handleResize)
+  },
+  beforeDestroy: function () {
+    window.removeEventListener('resize', this.handleResize)
+  }
 
-  data: () => ({
-    //
-  }),
 };
 </script>
