@@ -3,7 +3,6 @@
     <v-img
       src="../assets/potsun.jpg"
       :height="this.$store.state.height"
-      class="grey darken-4"
       transition="fade-transition"
       position="top"
     >

@@ -61,10 +61,28 @@
       </v-btn>
       
     </v-app-bar>
-
     <v-content>
       <router-view/>
     </v-content>
+    <v-footer
+      class="font-regular overline"
+      color="blue-grey lighten-4"
+    >
+      <v-col
+        class="text-center"
+        cols="12"
+      >
+      <v-btn text fab href="https://twitter.com/kohta1208"><v-icon color="grey darken-1" large class="mx-2">mdi-twitter</v-icon></v-btn>
+      <v-btn text fab href="https://www.instagram.com/yoko_hata_leo/"><v-icon color="grey darken-1" large class="mx-2">mdi-instagram</v-icon></v-btn>
+      <v-btn text fab href="https://github.com/KO-TA-Y"><v-icon color="grey darken-1" large class="mx-2">mdi-github-circle</v-icon></v-btn>
+      </v-col>
+      <v-col
+        class="text-center"
+        cols="12"
+      >
+        ©️{{ new Date().getFullYear() }} - Kota Yokoyama
+      </v-col>
+    </v-footer>
   </v-app>
 </template>
 
