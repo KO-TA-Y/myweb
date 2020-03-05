@@ -4,6 +4,7 @@
       app
       color="blue-grey lighten-1"
       dark
+      height="56"
     >
       <v-toolbar-title>
         <router-link to="/" style="text-decoration:none;"><v-icon x-large>mdi-home</v-icon></router-link>
@@ -24,7 +25,8 @@
       <v-btn
         text
         to="/about"
-        v-if="showBar"
+        v-if="this.$store.state.showBar"
+        x-large
       >
         <span class="mr-2">ABOUT</span>
         <v-icon>mdi-account-details</v-icon>
@@ -33,7 +35,8 @@
       <v-btn
         text
         to="/product"
-        v-if="showBar"
+        v-if="this.$store.state.showBar"
+        x-large
       >
         <span class="mr-2">PRODUCT</span>
         <v-icon>mdi-star-outline</v-icon>
@@ -41,7 +44,8 @@
       <v-btn
         text
         to="/research"
-        v-if="showBar"
+        v-if="this.$store.state.showBar"
+        x-large
       >
         <span class="mr-2">RESEARCH</span>
         <v-icon>mdi-chart-bar</v-icon>
@@ -49,7 +53,8 @@
       <v-btn
         text
         to="/blog"
-        v-if="showBar"
+        v-if="this.$store.state.showBar"
+        x-large
       >
         <span class="mr-2">BLOG</span>
         <v-icon>mdi-newspaper-variant-outline</v-icon>
@@ -71,31 +76,27 @@ export default {
   },
   data(){
     return{
-      showBar:true,
-      showNav:false,
     }
   },
   methods: {
     handleResize: function() {
       // resizeのたびにこいつが発火するので、ここでやりたいことをやる
       this.$store.state.width = window.innerWidth;
-      this.$store.state.height = window.innerHeight;
+      this.$store.state.height = window.innerHeight-56;
       if(this.$store.state.width<=750){
-        this.showBar=false
+        this.$store.state.showBar=false
       }else{
-        this.showBar=true
+        this.$store.state.showBar=true
       }
-      this.showNav= !this.showBar
     },
     
   },
   created() {
     if(this.$store.state.width<=750){
-        this.showBar=false
+        this.$store.state.showBar=false
       }else{
-        this.showBar=true
+        this.$store.state.showBar=true
       }
-      this.showNav= !this.showBar
   },
   mounted: function () {
     window.addEventListener('resize', this.handleResize)

@@ -7,18 +7,61 @@
       transition="fade-transition"
       position="top"
     >
-      <v-row class="lightbox white--text pa-2 fill-height">
-        <v-col>
-          <div class="name">Kota Yokoyama</div>
-        </v-col>
-      </v-row>
+      <div class="name">KOTA YOKOYAMA</div>
+      
+      <div class="buttons">
+        <v-btn 
+        text
+        to="/about"
+        v-if=!this.$store.state.showBar
+        block
+        outlined
+        large
+        dark
+        >
+          <span class="ma-2">ABOUT</span>
+        </v-btn>
+        <v-btn 
+        text
+        to="/product"
+        v-if=!this.$store.state.showBar
+        block
+        outlined
+        large
+        dark
+        >
+          <span class="ma-2">PRODUCT</span>
+        </v-btn>
+        <v-btn 
+        text
+        to="/research"
+        v-if=!this.$store.state.showBar
+        block
+        outlined
+        large
+        dark
+        >
+          <span class="ma-2">RESEARCH</span>
+        </v-btn>
+        <v-btn 
+        text
+        to="/blog"
+        v-if=!this.$store.state.showBar
+        block
+        outlined
+        large
+        dark
+        >
+          <span class="ma-2">BLOG</span>
+        </v-btn>
+      </div>
     </v-img>
+    
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-
 export default {
   name: 'Home',
   components: {
@@ -38,15 +81,24 @@ export default {
 <style scoped>
 .name{
   position:absolute; 
-  top:37%;
+  color:white;
+  top:40%;
   left:50%;
-  width:100%;
+  width:95%;
   text-align: center;
-  font-size:9vw; 
-  font-family: 'Quicksand', sans-serif;
+  font-size:5.5vh;  	
+  font-family: 'Economica', sans-serif;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
 }
-
+.buttons{
+  position: absolute;
+  bottom: 0%;
+  width:100%;
+  left:50%;
+  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+}
 </style>

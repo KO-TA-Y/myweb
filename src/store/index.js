@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     width:window.innerWidth,
-    height:innerHeight,
+    height:window.innerHeight-56,
+    showBar:true,
   },
   mutations: {
   },
