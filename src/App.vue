@@ -88,7 +88,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'App',
   components: {
@@ -102,7 +101,7 @@ export default {
       // resizeのたびにこいつが発火するので、ここでやりたいことをやる
       this.$store.state.width = window.innerWidth;
       this.$store.state.height = window.innerHeight-56;
-      if(this.$store.state.width<=750){
+      if(this.$store.state.width<=800){
         this.$store.state.showBar=false
         this.$store.state.researchCols=12
       }else{
@@ -113,16 +112,15 @@ export default {
     
   },
   created() {
-    if(this.$store.state.width<=750){
+    this.$store.state.width = window.innerWidth;
+    this.$store.state.height = window.innerHeight-56;
+    if(this.$store.state.width<=800){
         this.$store.state.showBar=false
+        this.$store.state.researchCols=12
       }else{
         this.$store.state.showBar=true
-    }
-    if(this.$store.state.width<=600){
-      this.$store.state.researchCols=12
-    }else{
-      this.$store.state.researchCols=6
-    }
+        this.$store.state.researchCols=6
+      }
   },
   mounted: function () {
     window.addEventListener('resize', this.handleResize)

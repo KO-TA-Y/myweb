@@ -1,77 +1,132 @@
 <template>
   <div class="home">
-    <v-img
-      src="../assets/potsun.jpg"
-      :height="this.$store.state.height"
-      position="top"
-    >
+    <div v-if="!showMobileImg">
+      <v-img
+        src="../assets/potsun.jpg"
+        :height="this.$store.state.height"
+        position="top"
+      >
       <div class="name">KOTA YOKOYAMA</div>
-      
       <div class="buttons">
-        <v-btn 
-        text
-        to="/about"
-        v-if=!this.$store.state.showBar
-        block
-        outlined
-        large
-        dark
-        >
-          <span class="ma-2">ABOUT</span>
-        </v-btn>
-        <v-btn 
-        text
-        to="/product"
-        v-if=!this.$store.state.showBar
-        block
-        outlined
-        large
-        dark
-        >
-          <span class="ma-2">PRODUCT</span>
-        </v-btn>
-        <v-btn 
-        text
-        to="/research"
-        v-if=!this.$store.state.showBar
-        block
-        outlined
-        large
-        dark
-        >
-          <span class="ma-2">RESEARCH</span>
-        </v-btn>
-        <v-btn 
-        text
-        to="/blog"
-        v-if=!this.$store.state.showBar
-        block
-        outlined
-        large
-        dark
-        >
-          <span class="ma-2">BLOG</span>
-        </v-btn>
-      </div>
-    </v-img>
-    
+          <v-btn 
+          text
+          to="/about"
+          block
+          outlined
+          large
+          dark
+          >
+            <span class="ma-2">ABOUT</span>
+          </v-btn>
+          <v-btn 
+          text
+          to="/product"
+          block
+          outlined
+          large
+          dark
+          >
+            <span class="ma-2">PRODUCT</span>
+          </v-btn>
+          <v-btn 
+          text
+          to="/research"
+          block
+          outlined
+          large
+          dark
+          >
+            <span class="ma-2">RESEARCH</span>
+          </v-btn>
+          <v-btn 
+          text
+          to="/blog"
+          block
+          outlined
+          large
+          dark
+          >
+            <span class="ma-2">BLOG</span>
+          </v-btn>
+        </div>
+      </v-img>
+    </div>
+    <div v-if="showMobileImg">
+      <v-img
+        src="../assets/potsun.jpg"
+        :height="mobileHeight"
+        v-once
+        position="top"
+      >
+        <div class="name">KOTA YOKOYAMA</div>
+        
+        <div class="buttons">
+          <v-btn 
+          text
+          to="/about"
+          block
+          outlined
+          large
+          dark
+          >
+            <span class="ma-2">ABOUT</span>
+          </v-btn>
+          <v-btn 
+          text
+          to="/product"
+          block
+          outlined
+          large
+          dark
+          >
+            <span class="ma-2">PRODUCT</span>
+          </v-btn>
+          <v-btn 
+          text
+          to="/research"
+          block
+          outlined
+          large
+          dark
+          >
+            <span class="ma-2">RESEARCH</span>
+          </v-btn>
+          <v-btn 
+          text
+          to="/blog"
+          block
+          outlined
+          large
+          dark
+          >
+            <span class="ma-2">BLOG</span>
+          </v-btn>
+        </div>
+      </v-img>
+    </div>
   </div>
 </template>
-
 <script>
-// @ is an alias to /src
 export default {
   name: 'Home',
   components: {
   },
   data(){
     return{
-
+    showMobileImg:null,
+    mobileHeight:window.innerHeight-56,
     }
   },
-  methods: {
-    
-  }
+  created() {
+    var ua = navigator.userAgent
+    if(ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0){
+      this.showMobileImg=true
+    }else if(ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0){
+      this.showMobileImg=true
+    }else{
+      this.showMobileImg=false
+    }
+  },
 
 }
 </script>
