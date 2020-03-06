@@ -107,6 +107,11 @@ export default {
       }else{
         this.$store.state.showBar=true
       }
+      if(this.$store.state.width<=600){
+        this.$store.state.researchCols=12
+      }else{
+        this.$store.state.researchCols=6
+      }
     },
     
   },
@@ -115,7 +120,12 @@ export default {
         this.$store.state.showBar=false
       }else{
         this.$store.state.showBar=true
-      }
+    }
+    if(this.$store.state.width<=600){
+      this.$store.state.researchCols=12
+    }else{
+      this.$store.state.researchCols=6
+    }
   },
   mounted: function () {
     window.addEventListener('resize', this.handleResize)

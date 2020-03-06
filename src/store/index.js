@@ -8,6 +8,7 @@ export default new Vuex.Store({
     width:window.innerWidth,
     height:window.innerHeight-56,
     showBar:true,
+    researchCols:12,
   },
   mutations: {
   },

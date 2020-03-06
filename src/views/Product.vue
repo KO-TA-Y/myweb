@@ -1,5 +1,22 @@
 <template>
   <div class="product">
-    <h1>This is an product page</h1>
+    <v-sheet
+      color="grey lighten-4"
+      tile
+      class="pt-8"
+      :min-height="this.$store.state.height"
+      :width="this.$store.state.width"
+    >
+      <productContent/>
+    </v-sheet>
   </div>
 </template>
+
+<script>
+import productContent from '../components/productContent.vue'
+export default {
+  components:{
+    productContent,
+  }
+}
+</script>
