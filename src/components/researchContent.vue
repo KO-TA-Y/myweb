@@ -4,6 +4,7 @@
       class="mx-auto"
       max-width="380"
       outlined
+      :width="this.$store.state.width*0.8"
     >
       <v-img
         :aspect-ratio="16/9"
@@ -11,7 +12,7 @@
       >
       </v-img>
       <v-divider></v-divider>
-      <v-card-title class="font-weight-bold">{{title}}</v-card-title>
+      <v-card-title class="subtitle-1 font-weight-bold">{{title}}</v-card-title>
       <v-card-text class="text--primary">
         <div>{{description}}</div>
       </v-card-text>

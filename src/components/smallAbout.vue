@@ -2,8 +2,9 @@
   <div id="smallAbout">
     <div class="">
       <v-list min-width=320 max-width=500 :width="this.$store.state.width" class="mx-auto" color="grey lighten-4">
-        <v-list-item  class="pl-5">
-          <v-card-title class="pa-2">About</v-card-title>
+        <v-list-item  class="pl-12">
+          <v-card-title class="display-1 pl-0 ml-0" v-if="this.$store.state.showBar">About</v-card-title>
+          <v-card-title class="headline pl-0 ml-0 pt-0" v-if="!this.$store.state.showBar">About</v-card-title>
         </v-list-item>
         <v-divider class="mx-5"></v-divider>
         <v-img src="../assets/photo.jpeg" class="mx-auto mt-4" contain :height=this.$store.state.height*0.3 aspect-ratio="1"></v-img>          

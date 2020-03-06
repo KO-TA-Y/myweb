@@ -1,12 +1,20 @@
 <template>
-  <div class="research">
+  <div class="research grey lighten-4">
     <v-sheet
-      color="grey lighten-4"
+      color="grey lighten-4 mx-auto"
       tile
       class="pt-8"
+      max-width=900
       :min-height="this.$store.state.height"
       :width="this.$store.state.width"
     >
+    <v-list min-width=700 max-width=900 :width="this.$store.state.width" class="mx-auto" color="grey lighten-4">
+      <v-list-item  class="pl-12">
+        <v-card-title class="display-1 pl-0 ml-0" v-if="this.$store.state.showBar">Research</v-card-title>
+        <v-card-title class="headline pl-0 ml-0 pt-0" v-if="!this.$store.state.showBar">Research</v-card-title>
+      </v-list-item>
+      <v-divider class="mx-5"></v-divider>
+    </v-list>
       <!-- <v-item-group class="mx-12">
         <v-container>
           <v-row>

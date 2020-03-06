@@ -104,12 +104,9 @@ export default {
       this.$store.state.height = window.innerHeight-56;
       if(this.$store.state.width<=750){
         this.$store.state.showBar=false
-      }else{
-        this.$store.state.showBar=true
-      }
-      if(this.$store.state.width<=600){
         this.$store.state.researchCols=12
       }else{
+        this.$store.state.showBar=true
         this.$store.state.researchCols=6
       }
     },
