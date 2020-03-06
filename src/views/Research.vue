@@ -8,10 +8,15 @@
       :min-height="this.$store.state.height"
       :width="this.$store.state.width"
     >
-    <v-list min-width=700 max-width=900 :width="this.$store.state.width" class="mx-auto" color="grey lighten-4">
+    <v-list v-if="this.$store.state.showBar" min-width=700 max-width=900 :width="this.$store.state.width" class="mx-auto" color="grey lighten-4">
       <v-list-item  class="pl-12">
-        <v-card-title class="display-1 pl-0 ml-0" v-if="this.$store.state.showBar">Research</v-card-title>
-        <v-card-title class="headline pl-0 ml-0 pt-0" v-if="!this.$store.state.showBar">Research</v-card-title>
+        <v-card-title class="display-1 pl-0 ml-0">Research</v-card-title>
+      </v-list-item>
+      <v-divider class="mx-5"></v-divider>
+    </v-list>
+    <v-list v-if="!this.$store.state.showBar" min-width=320 max-width=500 :width="this.$store.state.width" class="mx-auto" color="grey lighten-4">
+      <v-list-item  class="pl-12">
+        <v-card-title class="headline pl-0 ml-0 pt-0" >Research</v-card-title>
       </v-list-item>
       <v-divider class="mx-5"></v-divider>
     </v-list>
@@ -78,7 +83,7 @@ export default {
           title:'ノイズキャンセリングミュージック：音楽の印象誘導による騒音の不快度軽減効果の検証',
           date:'2019-07-22',
           desc:'こちらは騒音に対して適切な音楽を提示することで、騒音の不快度を軽減できるという傾向を明らかにした研究です。',
-          link:'/'
+          link:'http://nkmr-lab.org/news/sighci184_noican_yokoyama.html'
         }
       ]
     }

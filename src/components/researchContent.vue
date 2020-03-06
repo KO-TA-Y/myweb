@@ -21,7 +21,7 @@
         <v-spacer></v-spacer>
         <v-btn
           text
-          :to="link"
+          :href="link"
           outlined
         >
           発表報告記事
