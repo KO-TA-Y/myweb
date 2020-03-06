@@ -67,6 +67,7 @@
     <v-footer
       class="font-regular overline"
       color="blue-grey lighten-4"
+      :width="this.$store.state.width"
     >
       <v-col
         class="text-center"

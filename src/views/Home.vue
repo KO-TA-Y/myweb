@@ -3,7 +3,6 @@
     <v-img
       src="../assets/potsun.jpg"
       :height="this.$store.state.height"
-      transition="fade-transition"
       position="top"
     >
       <div class="name">KOTA YOKOYAMA</div>
