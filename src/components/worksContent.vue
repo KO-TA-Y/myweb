@@ -23,7 +23,8 @@
       <v-divider></v-divider>
       <v-card-title class="subtitle-1 font-weight-bold">{{title}}</v-card-title>
       <v-card-text class="text--primary">
-        <div>{{description}}</div>
+        <!-- <div :class="{'descHidden' : !overlay, 'desc' : overlay}">{{description}}</div> -->
+        <div class="descHidden">{{description}}</div>
       </v-card-text>
       <v-card-subtitle class="pb-0 pt-2">{{date}}</v-card-subtitle>
       <v-card-actions>
@@ -31,26 +32,24 @@
         <v-btn
           text
           outlined
-          :href=link
+          @click="goToLink"
         >
           詳細
         </v-btn>
-        <!-- <v-overlay :value="overlay" class="pa-auto ma-auto">
-          <div class="card">
-          <div class="video">
-            <iframe :width="this.$store.state.width*0.8" :height="this.$store.state.width*0.8*9/16" src="https://www.youtube.com/embed/et1aYxEfTrM?autoplay=1" frameborder="0"></iframe>
-          </div>
-          <v-btn
-            icon
-            @click="overlay = false"
-            class="hide"
-          >
-           <v-icon x-large>mdi-close</v-icon>
-          </v-btn>
-          </div>
-        </v-overlay> -->
       </v-card-actions>
     </v-card>
+    <!-- <v-overlay :value="overlay" class="pa-auto ma-auto">
+      <div class="video">
+        <iframe :width="this.$store.state.width*0.8" :height="this.$store.state.width*0.8*9/16" src="https://www.youtube.com/embed/et1aYxEfTrM?autoplay=1" frameborder="0"></iframe>
+      </div>
+      <v-btn
+        icon
+        @click="overlay = false"
+        class="hide"
+      >
+      <v-icon x-large>mdi-close</v-icon>
+      </v-btn>
+    </v-overlay> -->
   </div>
 </template>
 
@@ -82,8 +81,13 @@
       link: {
         type: String,
         required: true
-      },
-    }
+      }
+    },
+    methods: {
+      goToLink(){
+        this.$router.push(`works/${this.link}`)
+      }
+    },
   }
 </script>
 
@@ -113,5 +117,16 @@
   position: absolute;
   top:-10%;
   right:-10%;
+}
+.descHidden{
+  max-height: 3.2em;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  line-height: 1.6;
+}
+.desc{
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  max-height:20em;
 }
 </style>

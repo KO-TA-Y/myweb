@@ -7,7 +7,7 @@
         </v-list-item>
         <v-divider class="mx-5"></v-divider>
         <v-list-item class="py-7">
-          <v-img src="../assets/photo.jpeg" contain height=300 aspect-ratio="1"></v-img>          
+          <v-img src="../assets/picture/photo.jpeg" contain height=300 aspect-ratio="1"></v-img>          
           <v-list-item-content min-width=800 class="pl-7">
             <table class="pt-6">
               <tr>
@@ -36,7 +36,7 @@
               </tr>
               <tr>
                 <td class="pb-0"><strong>Skills</strong></td>
-                <td class="pb-0"><li>Javascript</li></td>
+                <td class="pb-0"><li>JavaScript</li></td>
               </tr>
               <tr>
                 <td class="py-1"></td>

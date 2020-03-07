@@ -7,7 +7,7 @@
           <v-card-title class="headline pl-0 ml-0 pt-0" v-if="!this.$store.state.showBar">About</v-card-title>
         </v-list-item>
         <v-divider class="mx-5"></v-divider>
-        <v-img src="../assets/photo.jpeg" class="mx-auto mt-4" contain min-height=200 :height=this.$store.state.width*0.3 aspect-ratio="1"></v-img>          
+        <v-img src="../assets/picture/photo.jpeg" class="mx-auto mt-4" contain min-height=200 :height=this.$store.state.width*0.3 aspect-ratio="1"></v-img>          
         <v-list-item-content min-width=800 class="pl-8">
           <table class="pt-2 pb-12 mx-auto" >
             <tr>
@@ -36,7 +36,7 @@
             </tr>
             <tr>
               <td class="pb-0"><strong>Skills</strong></td>
-              <td class="pb-0 pl-3"><li>Javascript</li></td>
+              <td class="pb-0 pl-3"><li>JavaScript</li></td>
             </tr>
             <tr>
               <td class="py-1"></td>

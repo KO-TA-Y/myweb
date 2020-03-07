@@ -21,8 +21,7 @@
       </div>
 
       <v-spacer></v-spacer>
-      <v-icon @click="drawer = true" v-if="!drawer" x-large>mdi-hamburger</v-icon>
-      <v-icon @click="drawer = true" v-if="drawer" x-large>mdi-close</v-icon>   
+      <v-icon @click="drawer = !drawer" v-if="!this.$store.state.showBar" x-large>{{ drawer ? 'mdi-close' : 'mdi-hamburger'}}</v-icon>
       <v-btn
         text
         to="/about"

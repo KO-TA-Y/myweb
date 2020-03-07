@@ -28,7 +28,7 @@
               class="mr-auto child-flex"
               :cols="researchCols"
             >
-            <worksContent :imgSrc="content.imgSrc" :title="content.title" :date="content.date" :description="content.desc" :link="content.link"></worksContent>
+            <worksContent :imgSrc="content.imgSrc" :title="content.title" :date="content.date" :description="content.descShort" :link="content.index"></worksContent>
           </v-col>
         </v-row>
       </v-container>
@@ -38,6 +38,7 @@
 
 <script>
 import worksContent from '../components/worksContent.vue'
+import contents from '../assets/data/works'
 export default {
   name:'works',
   components:{
@@ -46,37 +47,7 @@ export default {
   data(){
     return{
       researchCols:this.$store.state.researchCols,
-      contents:[
-        {
-          imgSrc:'https://firebasestorage.googleapis.com/v0/b/myfirstfirebase-626b2.appspot.com/o/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-03-06%2019.25.30.png?alt=media&token=ef675a04-c266-4eee-bb11-024c17776041',
-          title:'ホームページ',
-          date:'2020-03-XX',
-          desc:'このサイトになります。Vue.jsのお勉強として作りました。',
-          link:'/'
-        },
-        {
-          imgSrc:'https://firebasestorage.googleapis.com/v0/b/myfirstfirebase-626b2.appspot.com/o/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-03-06%2020.06.48.png?alt=media&token=72b4d37e-16ab-4ca6-abf9-cab6ed1fce82',
-          title:'SHAKE! SHAKE! (しゃけしゃけ)',
-          date:'2019-01-16',
-          desc:'会食する飲食店が決まらない時の意思決定を支援するものです。',//学部2年次の授業課題で作成したものです。
-          link:'https://youtu.be/et1aYxEfTrM'
-        },
-        {
-          imgSrc:'https://firebasestorage.googleapis.com/v0/b/myfirstfirebase-626b2.appspot.com/o/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-03-06%2020.43.02.png?alt=media&token=57985b16-c151-49a4-bae9-7bc1df0f5526',
-          title:'GAKUHU KAKERU-N',
-          date:'2017-06-07',
-          desc:'ギターは弾けるけど楽譜が書けないという人のためにギターの指板画像から楽譜を書けるようにしました。',//学部1年次のゼミでApp Inventorを使った課題が出された時のものです。
-          link:'/'
-        },
-        {
-          imgSrc:'https://firebasestorage.googleapis.com/v0/b/myfirstfirebase-626b2.appspot.com/o/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-03-06%2020.31.04.png?alt=media&token=dfe8c8ef-75d0-48be-9f02-477344f291a3',
-          title:'ヲタクのDVD鑑賞のためのAndroidアプリ',
-          date:'2017-04-??',
-          desc:'暗い部屋で、アイドルのDVDを鑑賞する時にスマホを推しの色のペンライト代わりにできるものです。',//学部1年次のゼミでApp Inventorを使った課題が出された時のものです。
-          link:'https://www.youtube.com/watch?v=oJUk9uq_ZFs&feature=youtu.be'
-        },
-        
-      ]
+      contents:contents,
     }
   },
   updated() {

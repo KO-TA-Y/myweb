@@ -2,7 +2,7 @@
   <div class="home">
     <div v-if="!showMobileImg">
       <v-img
-        src="../assets/potsun.jpg"
+        src="../assets/picture/potsun.jpg"
         :height="this.$store.state.height"
         position="top"
       >
@@ -57,7 +57,7 @@
     </div>
     <div v-if="showMobileImg">
       <v-img
-        src="../assets/potsun.jpg"
+        src="../assets/picture/potsun.jpg"
         :height="mobileHeight"
         v-once
         position="top"
