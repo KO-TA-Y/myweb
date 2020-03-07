@@ -1,5 +1,5 @@
 <template>
-  <div id="smallAbout">
+  <div id="researchContent">
     <v-card
       class="mx-auto"
       max-width="380"
@@ -10,6 +10,15 @@
         :aspect-ratio="16/9"
         :src=imgSrc
       >
+        <template v-slot:placeholder>
+          <v-row
+            class="fill-height ma-0"
+            align="center"
+            justify="center"
+          >
+            <v-progress-circular indeterminate color="grey lighten-2"></v-progress-circular>
+          </v-row>
+        </template>
       </v-img>
       <v-divider></v-divider>
       <v-card-title class="subtitle-1 font-weight-bold">{{title}}</v-card-title>

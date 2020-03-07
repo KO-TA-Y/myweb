@@ -1,5 +1,5 @@
 <template>
-  <div class="research grey lighten-4">
+  <div id="research" class="grey lighten-4">
     <v-sheet
       color="grey lighten-4 mx-auto"
       tile
@@ -8,49 +8,18 @@
       :min-height="this.$store.state.height"
       :width="this.$store.state.width"
     >
-    <v-list v-if="this.$store.state.showBar" min-width=700 max-width=900 :width="this.$store.state.width" class="mx-auto" color="grey lighten-4">
-      <v-list-item  class="pl-12">
-        <v-card-title class="display-1 pl-0 ml-0">Research</v-card-title>
-      </v-list-item>
-      <v-divider class="mx-5"></v-divider>
-    </v-list>
-    <v-list v-if="!this.$store.state.showBar" min-width=320 max-width=500 :width="this.$store.state.width" class="mx-auto" color="grey lighten-4">
-      <v-list-item  class="pl-12">
-        <v-card-title class="headline pl-0 ml-0 pt-0" >Research</v-card-title>
-      </v-list-item>
-      <v-divider class="mx-5"></v-divider>
-    </v-list>
-      <!-- <v-item-group class="mx-12">
-        <v-container>
-          <v-row>
-            <v-col
-              v-for="n in 9"
-              :key="n"
-              class="mx-auto d-flex child-flex"
-              cols="4"
-            >
-              <v-item v-slot:default="{ active, toggle }">
-                <v-card
-                  :color="active ? 'primary' : ''"
-                  class="d-flex align-center"
-                  dark
-                  height="200"
-                  @click="toggle"
-                >
-                  <v-scroll-y-transition>
-                    <div
-                      v-if="active"
-                      class="display-3 flex-grow-1 text-center"
-                    >
-                      Active
-                    </div>
-                  </v-scroll-y-transition>
-                </v-card>
-              </v-item>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-item-group> -->
+      <v-list v-if="this.$store.state.showBar" min-width=700 max-width=900 :width="this.$store.state.width" class="mx-auto" color="grey lighten-4">
+        <v-list-item  class="pl-12">
+          <v-card-title class="display-1 pl-0 ml-0">Research</v-card-title>
+        </v-list-item>
+        <v-divider class="mx-5"></v-divider>
+      </v-list>
+      <v-list v-if="!this.$store.state.showBar" min-width=320 max-width=500 :width="this.$store.state.width" class="mx-auto" color="grey lighten-4">
+        <v-list-item  class="pl-12">
+          <v-card-title class="headline pl-0 ml-0 pt-0" >Research</v-card-title>
+        </v-list-item>
+        <v-divider class="mx-5"></v-divider>
+      </v-list>
       <v-container max-width=1200>
           <v-row class="mx-auto">
             <v-col
