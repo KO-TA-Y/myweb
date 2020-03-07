@@ -1,0 +1,41 @@
+[
+  {
+    "index":"0",
+    "imgSrc":"https://firebasestorage.googleapis.com/v0/b/myfirstfirebase-626b2.appspot.com/o/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-03-06%2019.25.30.png?alt=media&token=ef675a04-c266-4eee-bb11-024c17776041",
+    "title":"ホームページ",
+    "date":"2020-03-XX",
+    "descShort":"このサイトになります。Vue.jsのお勉強として作りました。",
+    "desc":"<br>このサイトはVue.jsのお勉強として作りました。レスポンシブなデザインなどに挑戦しました。まぁ、Vuetify様様です。これから、より良いものにアップデートしていけたらと思います。<br><br><br><h2>使用技術</h2><br><li>JavaScript</li><li>Vue.js</li><li>Vuetify</li><li>HTML</li><li>CSS</li><br>",
+    "link":"/",
+    "btnText":"ホーム"
+  },
+  {
+    "index":"1",
+    "imgSrc":"https://firebasestorage.googleapis.com/v0/b/myfirstfirebase-626b2.appspot.com/o/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-03-06%2020.06.48.png?alt=media&token=72b4d37e-16ab-4ca6-abf9-cab6ed1fce82",
+    "title":"SHAKE! SHAKE! (しゃけしゃけ)",
+    "date":"2019-01-16",
+    "descShort":"会食する飲食店が決まらない時の意思決定を支援するものです。",
+    "desc":"<br>こちらは学部2年次の授業内課題で、同じ研究室の同期3人で作成したものです。友達や先輩とご飯に行く時、各々食べたいものはあるけどみんなバラバラで飲食店が決まらない時ありますよね？そんな時の意思決定にゲーム性を入れることで支援するものです。<br><br><br><h2>使用技術</h2><br><li>JavaScript (API関連担当)</li><li>CSS (デザイン担当)</li><li>PHP</li><br><br><h2>動画</h2><br><div style='position:relative;width:100%;display:block;padding-top: 56.25%;'><iframe style='width:100%;height:100%;position:absolute;top:0;left:0;' src='https://www.youtube.com/embed/et1aYxEfTrM?autoplay=0' frameborder='0'></iframe></div><br><br>",
+    "link":"shakeshake",
+    "btnText":"動画"
+  },
+  {
+    "index":"2",
+    "imgSrc":"https://firebasestorage.googleapis.com/v0/b/myfirstfirebase-626b2.appspot.com/o/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-03-06%2020.43.02.png?alt=media&token=57985b16-c151-49a4-bae9-7bc1df0f5526",
+    "title":"GAKUHU KAKERU-N",
+    "date":"2017-06-07",
+    "descShort":"ギターは弾けるけど楽譜が書けないという人のためにギターの指板画像から楽譜を書けるようにしました。",
+    "desc":"<br>こちらは学部1年次の授業内課題で作成したものです。ギターは弾けるけど楽譜が書けないという人のためにギターの指板画像から楽譜を書けるようにしました。特定のキー押しながら入力することで音符の種類などが変わるようになっています。臨時記号に苦労した覚えがあります。<br><br><br><h2>使用技術</h2><br><li>HSP</li><br><br><h2>作成画面</h2><br><img border='1' style='width:100%;height:auto;' src='https://firebasestorage.googleapis.com/v0/b/myfirstfirebase-626b2.appspot.com/o/gakuhu.png?alt=media&token=f555d260-641c-4040-88e2-544e838a949e'>",
+    "link":"/"
+  },
+  {
+    "index":"3",
+    "imgSrc":"https://firebasestorage.googleapis.com/v0/b/myfirstfirebase-626b2.appspot.com/o/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-03-06%2020.31.04.png?alt=media&token=dfe8c8ef-75d0-48be-9f02-477344f291a3",
+    "title":"ヲタクのDVD鑑賞のためのAndroidアプリ",
+    "date":"2017-04-??",
+    "descShort":"暗い部屋で、アイドルのDVDを鑑賞する時にスマホを推しの色のペンライト代わりにできるものです。",
+    "desc":"<br>こちらは学部1年次のゼミで作ったものになります。暗い部屋で、アイドルのDVDを鑑賞する時にスマホを推しの色のペンライト代わりにできるものです。App Inventorはすごいわかりやすかったです。<br><br><br><h2>使用技術</h2><br><li>App Inventor</li><br><br><h2>動画</h2><br><div style='position:relative;width:100%;display:block;padding-top: 56.25%;'><iframe style='width:100%;height:100%;position:absolute;top:0;left:0;' src='https://www.youtube.com/embed/oJUk9uq_ZFs?autoplay=0' frameborder='0'></iframe></div><br><br>",
+    "link":"https://www.youtube.com/watch?v=oJUk9uq_ZFs&feature=youtu.be",
+    "btnText":"動画"
+  }
+]
