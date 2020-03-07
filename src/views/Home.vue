@@ -13,6 +13,7 @@
           to="/about"
           block
           outlined
+          v-if="!this.$store.state.showBar"
           large
           dark
           >
@@ -20,19 +21,21 @@
           </v-btn>
           <v-btn 
           text
-          to="/product"
+          to="/works"
           block
           outlined
+          v-if="!this.$store.state.showBar"
           large
           dark
           >
-            <span class="ma-2">PRODUCT</span>
+            <span class="ma-2">WORKS</span>
           </v-btn>
           <v-btn 
           text
           to="/research"
           block
           outlined
+          v-if="!this.$store.state.showBar"
           large
           dark
           >
@@ -43,6 +46,7 @@
           to="/blog"
           block
           outlined
+          v-if="!this.$store.state.showBar"
           large
           dark
           >
@@ -73,13 +77,13 @@
           </v-btn>
           <v-btn 
           text
-          to="/product"
+          to="/works"
           block
           outlined
           large
           dark
           >
-            <span class="ma-2">PRODUCT</span>
+            <span class="ma-2">WORKS</span>
           </v-btn>
           <v-btn 
           text
@@ -141,9 +145,9 @@ export default {
   text-align: center;
   font-size:5.5vh;  	
   font-family: 'Economica', sans-serif;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
 }
 .buttons{
   position: absolute;

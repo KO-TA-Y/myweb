@@ -21,7 +21,8 @@
       </div>
 
       <v-spacer></v-spacer>
-      
+      <v-icon @click="drawer = true" v-if="!drawer" x-large>mdi-hamburger</v-icon>
+      <v-icon @click="drawer = true" v-if="drawer" x-large>mdi-close</v-icon>   
       <v-btn
         text
         to="/about"
@@ -34,11 +35,11 @@
       </v-btn>
       <v-btn
         text
-        to="/product"
+        to="/works"
         v-if="this.$store.state.showBar"
         x-large
       >
-        <span class="mr-2">PRODUCT</span>
+        <span class="mr-2">WORKS</span>
         <v-icon>mdi-star-outline</v-icon>
       </v-btn>
       <v-btn
@@ -61,7 +62,37 @@
       </v-btn>
       
     </v-app-bar>
-    <v-content>
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      right
+      class="pt-12 mt-1"
+      style="position:fixed;"
+    >
+    
+      <v-list
+        dense
+      >
+        <v-list-item-group
+          active-class="blue-grey--text text--darken-1"
+        >
+          <v-list-item
+            v-for="item in items"
+            :key="item.title"
+            :to="item.link"
+            class="py-1"
+          >
+            <v-list-item-icon>
+              <v-icon v-text="item.icon"></v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title v-text="item.title"></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+    <v-content transition="slide-x-transition">
       <router-view/>
     </v-content>
     <v-footer
@@ -94,6 +125,29 @@ export default {
   },
   data(){
     return{
+      items:[
+        {
+          title:'ABOUT',
+          icon:'mdi-account-details',
+          link:'/about'
+        },
+        {
+          title:'WORKS',
+          icon:'mdi-star-outline',
+          link:'/works'
+        },
+        {
+          title:'RESEARCH',
+          icon:'mdi-chart-bar',
+          link:'/research'
+        },
+        {
+          title:'BLOG',
+          icon:'mdi-newspaper-variant-outline',
+          link:'/blog'
+        },
+      ],
+      drawer:false,
     }
   },
   methods: {
