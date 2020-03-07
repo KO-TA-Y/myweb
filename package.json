@@ -1,5 +1,5 @@
 {
-  "name": "myweb",
+  "name": "Kota Yokoyama",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
-    "ismobilejs": "^1.0.3",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
     "vuetify": "^2.2.11",
