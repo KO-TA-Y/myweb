@@ -105,7 +105,7 @@
       >
       <v-btn text fab href="https://twitter.com/kohta1208"><v-icon color="grey darken-1" large class="mx-2">mdi-twitter</v-icon></v-btn>
       <v-btn text fab href="https://www.instagram.com/yoko_hata_leo/"><v-icon color="grey darken-1" large class="mx-2">mdi-instagram</v-icon></v-btn>
-      <v-btn text fab href="https://github.com/KO-TA-Y"><v-icon color="grey darken-1" large class="mx-2">mdi-github-circle</v-icon></v-btn>
+      <v-btn text fab href="https://github.com/KO-TA-Y"><v-icon color="grey darken-1" large class="mx-2">mdi-github</v-icon></v-btn>
       </v-col>
       <v-col
         class="text-center"
