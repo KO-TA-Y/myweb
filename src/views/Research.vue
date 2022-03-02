@@ -23,12 +23,12 @@
       <v-container max-width=1200>
           <v-row class="mx-auto">
             <v-col
-              v-for="content in contents"
+              v-for="content in this.$store.state.research"
               :key="content.title"
               class="mr-auto child-flex"
               :cols="researchCols"
             >
-            <researchContent :imgSrc="content.imgSrc" :title="content.title" :date="content.date" :description="content.desc" :link="content.link"></researchContent>
+            <researchContent :imgSrc="content.imgSrc" :title="content.title" :date="content.date" :description="content.description" :link="content.link"></researchContent>
           </v-col>
         </v-row>
       </v-container>
@@ -46,16 +46,16 @@ export default {
   data(){
     return{
       researchCols:this.$store.state.researchCols,
-      contents:[
-        {
-          imgSrc:'https://firebasestorage.googleapis.com/v0/b/myfirstfirebase-626b2.appspot.com/o/noican.jpg?alt=media&token=d67b98ba-243a-4f90-bf63-fd1fe469f82b',
-          title:'ノイズキャンセリングミュージック：音楽の印象誘導による騒音の不快度軽減効果の検証',
-          date:'2019-07-22',
-          desc:'こちらは騒音に対して適切な音楽を提示することで、騒音の不快度を軽減できるという傾向を明らかにした研究です。',
-          link:'http://nkmr-lab.org/news/sighci184_noican_yokoyama.html'
-        }
-      ]
     }
+  },
+  created() {
+    this.$axios.get('https://yokoyama.nkmr.io/api/get_research.php',{
+    }).then((response)=>{
+      this.$store.commit('setResearch',{research:response.data})
+    }).catch((error)=>{
+      alert('エラーが発生しました')
+      console.log('err:',error)
+    })
   },
   updated() {
     this.researchCols=this.$store.state.researchCols

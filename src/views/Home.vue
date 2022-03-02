@@ -2,7 +2,7 @@
   <div class="home">
     <div v-if="!showMobileImg">
       <v-img
-        src="../assets/picture/potsun.jpg"
+        src="https://firebasestorage.googleapis.com/v0/b/myfirstfirebase-626b2.appspot.com/o/potsun.jpg?alt=media&token=93227066-5b6c-45e3-bbfc-ef22403b3500"
         :height="this.$store.state.height"
         position="top"
       >
@@ -57,7 +57,7 @@
     </div>
     <div v-if="showMobileImg">
       <v-img
-        src="../assets/picture/potsun.jpg"
+        src="https://firebasestorage.googleapis.com/v0/b/myfirstfirebase-626b2.appspot.com/o/potsun.jpg?alt=media&token=93227066-5b6c-45e3-bbfc-ef22403b3500"
         :height="mobileHeight"
         v-once
         position="top"

@@ -7,7 +7,7 @@
           <v-card-title class="headline pl-0 ml-0 pt-0" v-if="!this.$store.state.showBar">About</v-card-title>
         </v-list-item>
         <v-divider class="mx-5"></v-divider>
-        <v-img src="../assets/picture/photo.jpeg" class="mx-auto mt-4" contain min-height=200 :height=this.$store.state.width*0.3 aspect-ratio="1"></v-img>          
+        <v-img src="https://firebasestorage.googleapis.com/v0/b/myfirstfirebase-626b2.appspot.com/o/photo.jpg?alt=media&token=5ddf4852-bad2-41dd-aefb-d85b627a3038" class="mx-auto mt-4" contain min-height=200 :height=this.$store.state.width*0.3 aspect-ratio="1"></v-img>          
         <v-list-item-content min-width=800 class="pl-8">
           <table class="pt-2 pb-12 mx-auto" >
             <tr>
@@ -16,11 +16,11 @@
             </tr>
             <tr>
               <td class="pb-1"><strong>Affiliarion</strong></td>
-              <td class="pb-1 pl-3">明治大学 総合数理学部</td>
+              <td class="pb-1 pl-3">明治大学大学院 先端数理科学研究科</td>
             </tr>
             <tr>
               <td style="border-bottom: dashed 1px silver;" class="pt-1"></td>
-              <td style="border-bottom: dashed 1px silver;" class="pt-1 pl-3">先端メディアサイエンス学科 4年</td>
+              <td style="border-bottom: dashed 1px silver;" class="pt-1 pl-3">先端メディアサイエンス専攻 修士1年</td>
             </tr>
             <tr>
               <td class="pb-0"><strong>Likes</strong></td>
@@ -44,11 +44,15 @@
             </tr>
             <tr>
               <td class="py-0"></td>
-              <td class="py-0 pl-3"><li>HTML</li></td>
+              <td class="py-0 pl-3"><li>Python</li></td>
             </tr>
             <tr>
               <td class="py-1"></td>
-              <td class="py-1 pl-3"><li>Processing</li></td>
+              <td class="py-1 pl-3"><li>HTML</li></td>
+            </tr>
+            <tr>
+              <td class="py-0"></td>
+              <td class="py-0 pl-3"><li>Processing</li></td>
             </tr>
           </table>    
         </v-list-item-content>

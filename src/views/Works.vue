@@ -23,7 +23,7 @@
       <v-container max-width=1200>
           <v-row class="mx-auto">
             <v-col
-              v-for="content in contents"
+              v-for="content in this.$store.state.works"
               :key="content.title"
               class="mr-auto child-flex"
               :cols="researchCols"
@@ -38,7 +38,6 @@
 
 <script>
 import worksContent from '../components/worksContent.vue'
-import contents from '../assets/data/works'
 export default {
   name:'works',
   components:{
@@ -47,8 +46,16 @@ export default {
   data(){
     return{
       researchCols:this.$store.state.researchCols,
-      contents:contents,
     }
+  },
+  created() {
+    this.$axios.get('https://yokoyama.nkmr.io/api/get_works.php',{
+    }).then((response)=>{
+      this.$store.commit('setWorks',{works:response.data})
+    }).catch((error)=>{
+      alert('エラーが発生しました')
+      console.log('err:',error)
+    })
   },
   updated() {
     this.researchCols=this.$store.state.researchCols

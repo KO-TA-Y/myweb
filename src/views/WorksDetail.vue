@@ -24,7 +24,7 @@
         </template>
         </v-img>
         <v-list-item-content min-width=800 class="px-12">
-          <div class="pt-8 desc" v-html="contents[this.$route.params.index].desc"></div>
+          <div class="pt-8 desc" v-html="contents[this.$route.params.index].description"></div>
         </v-list-item-content>
       </v-list>
     </div>
@@ -32,12 +32,11 @@
 </template>
 
 <script>
-import contents from '../assets/data/works'
   export default {
     name:'smallAbout',
     data(){
       return{
-        contents:contents,
+        contents:this.$store.state.works,
       }
     },
   }
